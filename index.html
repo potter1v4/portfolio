@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potter | Portfólio Front-End</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #1a1a1a;
+            --text-secondary: #666666;
+            --border-color: #eeeeee;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        /* Cabeçalho Formal */
+        header {
+            margin-bottom: 60px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        /* Seção de Projetos */
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .project-card {
+            display: flex;
+            gap: 30px;
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 30px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            align-items: center;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transform: translateY(-5px);
+        }
+
+        /* Estilo da Imagem Real */
+        .project-image-real {
+            width: 300px;
+            height: 180px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 1px solid var(--border-color);
+            background-color: #000; /* Fundo preto para imagens escuras */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .project-image-real img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Faz a imagem cobrir o quadrado sem distorcer */
+            display: block;
+        }
+
+        .project-info {
+            flex-grow: 1;
+        }
+
+        .project-info h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.4rem;
+        }
+
+        .project-info p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        /* Ícones de Tecnologia */
+        .tech-stack {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .tech-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--text-secondary);
+        }
+
+        .tech-badge img {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 4px;
+        }
+
+        .btn-github {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid var(--text-main);
+            border-radius: 30px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-github:hover {
+            background-color: var(--text-main);
+            color: #fff;
+        }
+
+        /* Responsividade para Celular */
+        @media (max-width: 768px) {
+            .project-card {
+                flex-direction: column;
+            }
+            .project-image-real {
+                width: 100%;
+            }
+            .container {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>João Pedro Gonçalves </h1>
+        <div class="subtitle">Desenvolvedor Front-End</div>
+        <p style="color: var(--text-secondary); max-width: 600px;">
+            Criando experiências digitais com precisão, clareza e foco em performance. 
+            Especialista em transformar designs complexos em interfaces funcionais.
+        </p>
+    </header>
+
+    <main>
+        <h2 class="section-title">Meus Projetos</h2>
+
+        <div class="project-card">
+            <div class="project-image-real">
+                <img src="potter-sounds-projeto.jpg" alt="Print da tela de login Potter Sounds">
+            </div>
+            <div class="project-info">
+                <h3>Potter Sounds - Login Screen</h3>
+                <p>Interface de autenticação moderna inspirada no Spotify, utilizando Glassmorphism e validação dinâmica de credenciais com JavaScript.</p>
+                
+                <div class="tech-stack">
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                        HTML5
+                    </div>
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                        CSS3
+                    </div>
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+                        JS
+                    </div>
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="UI">
+                        UI DESIGN
+                    </div>
+                </div>
+
+                <a href="https://github.com/potter1v4/pottersounds" class="btn-github">VER REPOSITÓRIO GITHUB</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image-real">
+                <img src="site-vasco.jpg" alt="Landing Page Próximos Jogos do Vasco">
+            </div>
+            <div class="project-info">
+                <h3>Vasco da Gama - Próximos Jogos</h3>
+                <p>Landing page dinâmica e responsiva que exibe o calendário de jogos, desenvolvida com foco em performance e experiência do usuário (UX/UI).</p>
+                
+                <div class="tech-stack">
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind">
+                        TAILWIND
+                    </div>
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+                        JS (ES6+)
+                    </div>
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                        HTML5
+                    </div>
+                </div>
+
+                <a href="https://github.com/potter1v4/potter1v4" class="btn-github">VER REPOSITÓRIO GITHUB</a>
+            </div>
+        </div>
+        </div>
+
+    </main>
+</div>
+
+</body>
+</html>
